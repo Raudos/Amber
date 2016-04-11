@@ -1,0 +1,81 @@
+.container-fluid > .row:nth-child(1) {
+  background-color: black;
+  text-align: center; }
+  .container-fluid > .row:nth-child(1) .cell:nth-child(1) {
+    position: relative; }
+    .container-fluid > .row:nth-child(1) .cell:nth-child(1) input {
+      background-color: black;
+      border: 1px solid #85939f;
+      color: #85939f;
+      text-indent: 5px;
+      padding: 0.5em;
+      margin: 0.5em 0; }
+    .container-fluid > .row:nth-child(1) .cell:nth-child(1) img {
+      position: absolute;
+      left: 62%;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer; }
+  .container-fluid > .row:nth-child(1) .offsetCell {
+    width: 50%; }
+  .container-fluid > .row:nth-child(1) .cell:nth-child(3) div {
+    float: left;
+    height: 100%;
+    width: 50%; }
+    .container-fluid > .row:nth-child(1) .cell:nth-child(3) div p {
+      color: #85939f;
+      display: inline-block;
+      position: relative;
+      top: 40%;
+      transform: translateY(-50%);
+      padding-left: 6px;
+      cursor: pointer; }
+    .container-fluid > .row:nth-child(1) .cell:nth-child(3) div img {
+      height: 40%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer; }
+
+.container-fluid > .row:nth-child(2) {
+  background-color: #474747;
+  text-align: center; }
+  .container-fluid > .row:nth-child(2) img {
+    width: 40%;
+    padding: 1em 0; }
+  .container-fluid > .row:nth-child(2) .row {
+    height: 100%; }
+    .container-fluid > .row:nth-child(2) .row .button {
+      float: left;
+      width: 14.28571%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer; }
+      .container-fluid > .row:nth-child(2) .row .button .upper {
+        height: 20%; }
+      .container-fluid > .row:nth-child(2) .row .button .lower {
+        height: 80%; }
+      .container-fluid > .row:nth-child(2) .row .button p {
+        color: white;
+        font-size: 0.7em;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(1) .upper {
+        background-color: #ffae00; }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(2) .upper {
+        background-color: #fc7100; }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(3) .upper {
+        background-color: #e51c5e; }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(4) .upper {
+        background-color: #ae0f8d; }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(5) .upper {
+        background-color: #6d0fae; }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(6) .upper {
+        background-color: #33227a; }
+      .container-fluid > .row:nth-child(2) .row .button:nth-child(7) .upper {
+        background-color: #0c8fcc; }
+
+/*# sourceMappingURL=app.css.map */

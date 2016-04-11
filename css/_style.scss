@@ -1,0 +1,116 @@
+.container-fluid > .row:nth-child(1) {
+  background-color: black;
+  text-align: center;
+  .cell:nth-child(1) {
+    position: relative;
+    input {
+      background-color: black;
+      border: 1px solid $firstRow;
+      color: $firstRow;
+      text-indent: 5px;
+      padding: 0.5em;
+      margin: 0.5em 0;
+    }
+    img {
+      position: absolute;
+      left: 62%;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+  .offsetCell {
+    width: 50%;
+  }
+  .cell:nth-child(3) {
+    div {
+      float: left;
+      height: 100%;
+      width: 50%;
+      p {
+        color: $firstRow;
+        display: inline-block;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        padding-left: 6px;
+        cursor: pointer;
+      }
+      img {
+        height: 40%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+.container-fluid > .row:nth-child(2) {
+  background-color: rgb(71, 71, 71);
+  text-align: center;
+  img {
+    width: 40%;
+    padding: 1em 0;
+  }
+  .row {
+    height: 100%;
+    .button {
+      float: left;
+      width: (100%/7);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      .upper {
+        height: 20%;
+      }
+      .lower {
+        height: 80%;
+      }
+      p {
+        color: white;
+        font-size: 0.7em;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:nth-child(1) {
+        .upper {
+          background-color: $first;
+        }
+      }
+      &:nth-child(2) {
+        .upper {
+          background-color: $second;
+        }
+      }
+      &:nth-child(3) {
+        .upper {
+          background-color: $third;
+        }
+      }
+      &:nth-child(4) {
+        .upper {
+          background-color: $fourth;
+        }
+      }
+      &:nth-child(5) {
+        .upper {
+          background-color: $fifth;
+        }
+      }
+      &:nth-child(6) {
+        .upper {
+          background-color: $sixth;
+        }
+      }
+      &:nth-child(7) {
+        .upper {
+          background-color: $seventh;
+        }
+      }
+    }
+  }
+}
