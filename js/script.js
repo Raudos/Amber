@@ -16,6 +16,9 @@ function $slideMenu() {
     }, 500);
   });
 }
+function $adjustHeight() {
+  $(".person").css("height", $(".person").width() + "px")
+}
 
 //------------------------------------------------------------------
 //                    READY
@@ -23,4 +26,5 @@ function $slideMenu() {
 
 $(document).on("ready", function() {
   $slideMenu()
+  $adjustHeight()
 })

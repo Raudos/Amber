@@ -1,3 +1,51 @@
+
+//--------------------------------------------------------------------------------
+//                              Global objects
+//--------------------------------------------------------------------------------
+
+.link {
+  display: inline-block;
+  height: 4em;
+  width: 12em;
+  background-color: $thirdRowButton;
+  margin: 4em 1em;
+  border: 3px solid $thirdRowButton;
+  cursor: pointer;
+  p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: rgba(0,0,0,0);
+    p {
+      color: $thirdRowButton;
+    }
+  }
+}
+
+.header {
+  hr {
+    width: 5%;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    height: 5px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+.container-fluid > .row {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+//--------------------------------------------------------------------------------
+//                              First row
+//--------------------------------------------------------------------------------
+
 .container-fluid > .row:nth-child(1) {
   background-color: black;
   text-align: center;
@@ -31,7 +79,7 @@
         color: $firstRow;
         display: inline-block;
         position: relative;
-        top: 40%;
+        top: 45%;
         transform: translateY(-50%);
         padding-left: 6px;
         cursor: pointer;
@@ -46,6 +94,11 @@
     }
   }
 }
+
+//--------------------------------------------------------------------------------
+//                              Second row
+//--------------------------------------------------------------------------------
+
 .container-fluid > .row:nth-child(2) {
   background-color: rgb(71, 71, 71);
   text-align: center;
@@ -109,6 +162,113 @@
       &:nth-child(7) {
         .upper {
           background-color: $seventh;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Third row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(3) {
+  height: 50em;
+  background-image: url("images/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  &>div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    h1 {
+      color: white;
+      font-size: 3em;
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Fourth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(4) {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 4em;
+  background-color: white;
+  color: grey;
+  hr {
+    background-color: grey;
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Fifth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(5) {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-color: $fifthRow;
+  color: white;
+  hr {
+    background-color: white;
+  }
+  &>.row {
+    .person {
+      margin-top: 2em;
+      width: 30%;
+      height: 290px;
+      float: left;
+      background-color: white;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:nth-child(1) {
+        background-image: url("images/project1.jpg");
+      }
+      &:nth-child(2) {
+        margin-right: 5%;
+        margin-left: 5%;
+        background-image: url("images/project2.jpg");
+      }
+      &:nth-child(3) {
+        background-image: url("images/project3.jpg");
+      }
+      .about {
+        height: 25%;
+        position: relative;
+        top: 75%;
+        background-color: $fifthRowInner;
+        div {
+          float: left;
+          &:nth-child(1) {
+            width: 80%;
+            text-align: left;
+            height: 100%;
+            p {
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              padding-left: 20px;
+              span {
+                color: $thirdRowButton;
+              }
+            }
+          }
+          &:nth-child(2) {
+            width: 20%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            img {
+              margin-bottom: 5px;
+            }
+            p {
+              color: $thirdRowButton;
+            }
+          }
         }
       }
     }
