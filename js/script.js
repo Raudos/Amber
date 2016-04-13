@@ -72,20 +72,22 @@ function $showTeam() {
     if($(this).hasClass("active")) {
       $(this).parent().prev().animate({
         bottom: "0%"
-      }, 500);
+      }, 500, function() {
+        $(this).children(".name").animate({
+          top: "-5%"
+        }, 500);
+      });
       $(this).parent().prev().removeClass("imShadow");
-      $(this).parent().prev().prev().animate({
-        top: "50%"
-      }, 500);
       $(this).removeClass("active");
     } else {
-      $(this).parent().prev().animate({
-        bottom: "-20%"
-      }, 500);
       $(this).parent().prev().addClass("imShadow");
-      $(this).parent().prev().prev().animate({
-        top: "0%"
-      }, 500);
+      $(this).parent().prev().animate({
+        bottom: "-25%"
+      }, 500, function() {
+        $(this).children(".name").animate({
+          top: "-400%"
+        }, 500);
+      });
       $(this).addClass("active");
     }
   });

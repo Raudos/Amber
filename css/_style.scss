@@ -5,18 +5,20 @@
 
 .link {
   display: inline-block;
-  height: 4em;
-  width: 12em;
   background-color: $thirdRowButton;
-  margin: 4em 1em;
+  height: 4rem;
+  width: 12rem;
+  max-width: 40%;
+  margin-top: 3em;
   border: 3px solid $thirdRowButton;
   cursor: pointer;
+
   p {
+    color: white;
+    font-weight: bold;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    color: white;
-    font-weight: bold;
   }
   &:hover {
     background-color: rgba(0,0,0,0);
@@ -31,18 +33,19 @@
     width: 5%;
     margin-top: 2em;
     margin-bottom: 4em;
+    @media (max-width: 900px) {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
     height: 5px;
     background-color: rgb(238, 238, 238);
     border: 0px;
   }
-  h1 {
-    font-size: 2.5em;
-  }
 }
 
 .container-fluid > .row {
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 //--------------------------------------------------------------------------------
 //                              First row
@@ -51,6 +54,12 @@
 .container-fluid > .row:nth-child(1) {
   background-color: black;
   text-align: center;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  @media (max-width: 400px) {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
   .cell:nth-child(1) {
     position: relative;
     input {
@@ -59,11 +68,11 @@
       color: $firstRow;
       text-indent: 5px;
       padding: 0.5em;
-      margin: 0.5em 0;
+      width: 90%;
     }
-    img {
+    .search {
       position: absolute;
-      left: 62%;
+      right: 6%;
       top: 50%;
       transform: translateY(-50%);
       cursor: pointer;
@@ -71,26 +80,22 @@
   }
   .offsetCell {
     width: 50%;
+    @media (max-width: 768px) {
+      width: (100%/3);
+    }
   }
   .cell:nth-child(3) {
-    div {
-      float: left;
+    .cell {
       height: 100%;
       width: 50%;
       p {
         color: $firstRow;
         display: inline-block;
-        position: relative;
-        top: 45%;
-        transform: translateY(-50%);
         padding-left: 6px;
         cursor: pointer;
       }
       img {
         height: 40%;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         cursor: pointer;
       }
     }
@@ -107,6 +112,9 @@
   img {
     width: 40%;
     padding: 1em 0;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
   }
   .row {
     height: 100%;
@@ -125,7 +133,6 @@
       }
       p {
         color: white;
-        font-size: 0.7em;
         position: absolute;
         top: 60%;
         left: 50%;
@@ -186,8 +193,12 @@
     transform: translateY(-50%);
     h1 {
       color: white;
-      font-size: 3em;
     }
+  }
+  .link {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    display: inline-block;
   }
 }
 
@@ -241,6 +252,7 @@
         position: relative;
         top: 75%;
         background-color: $fifthRowInner;
+        padding: 5%;
         div {
           float: left;
           &:nth-child(1) {
@@ -251,7 +263,7 @@
               position: relative;
               top: 50%;
               transform: translateY(-50%);
-              padding-left: 20px;
+
               span {
                 color: $thirdRowButton;
               }
@@ -286,6 +298,10 @@
           .circle {
             height: 2em;
             width: 2em;
+            @media (max-width: 700px) {
+              height: 1.3em;
+              width: 1.3em;
+            }
             background-color: $thirdRowButton;
             border-radius: 50%;
             margin: 0.7em;
@@ -296,6 +312,7 @@
             img {
               position: relative;
               top: 50%;
+              width: 60%;
               transform: translateY(-50%);
             }
           }
@@ -323,10 +340,23 @@
       width: (100%*4/12);
       .link {
         border: 3px solid white;
+        margin-bottom: 3em;
+        max-width: 100%;
         &:hover {
           background-color: white;
           color: $thirdRowButton;
         }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .table {
+      display: block !important;
+      margin-top: 3em;
+      .cell {
+        display: block;
+        text-align: center;
+        width: 100%;
       }
     }
   }
@@ -442,7 +472,6 @@
       text-align: left;
       padding: 10px;
       h2 {
-        font-size: 1.6em;
         margin-top: 0.5em;
         color: $thirdRowButton;
       }
@@ -474,6 +503,23 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    .post {
+      width: 80%;
+      margin-left: 10% !important;
+      margin-right: 10% !important;
+      display: none;
+      .title {
+        height: auto;
+      }
+      .text {
+        height: auto;
+      }
+    }
+    .triggered {
+      display: block;
+    }
+  }
 }
 
 //--------------------------------------------------------------------------------
@@ -484,6 +530,11 @@
   background-color: $thirdRowButton;
   padding-top: 5em;
   padding-bottom: 5em;
+  .table:nth-child(2) {
+    .cell {
+      vertical-align: top;
+    }
+  }
   .header {
     h1 {
       color: white;
@@ -497,8 +548,6 @@
     width: (25%/2);
     height: 100%;
     .dotsContainer {
-      position: relative;
-      top: -12%;
       .dot {
         height: 1em;
         width: 1em;
@@ -506,6 +555,12 @@
         display: inline-block;
         border-radius: 50%;
         margin: 1em;
+        @media (max-width: 850px) {
+          margin: 0;
+          &:nth-child(1), &:nth-child(3) {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -536,8 +591,7 @@
     }
     h2 {
       color: white;
-      font-size: 3em;
-      margin-top: 1em;
+      margin-top: 1rem;
     }
     p {
       color: white;
@@ -556,14 +610,14 @@
   .team {
     width: (85%/4);
     float: left;
-    height: 28em;
+    height: 40rem;
     background-color: rgb(204,204,204);
     position: relative;
     box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.75);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    //display: none;
     &:nth-child(1), &:nth-child(2), &:nth-child(3) {
       margin-right: 5%;
     }
@@ -579,24 +633,28 @@
     &:nth-child(4) {
       background-image: url("images/team4.jpg");
     }
-    .name {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-      background-color: white;
-      padding: 1em;
-      border: 2px solid grey;
-      z-index: 3
-    }
+
     .about {
       background-color: white;
       position: absolute;
-      height: 50%;
+      height: 40%;
       bottom: 0%;
       p {
-        margin-top: 17%;
+        margin: 10% 5% 0 5%;
+      }
+      .name {
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        background-color: white;
+        padding: 0.5rem;
+        border: 2px solid grey;
+        z-index: 3;
+        p {
+          margin: 0;
+        }
       }
     }
     .imShadow {
@@ -621,6 +679,18 @@
           color: $thirdRowButton;
         }
       }
+    }
+  }
+  @media (max-width: 1000px) {
+    .team {
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+      display: none;
+      height: 32rem;
+    }
+    .active:not(.link) {
+      display: inline-block;
     }
   }
 }

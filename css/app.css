@@ -4,20 +4,152 @@
 p, h1, h2 {
   font-family: lato; }
 
+p {
+  font-size: 0.5rem; }
+  @media (min-width: 500px) {
+    p {
+      font-size: 0.66667rem; } }
+  @media (min-width: 700px) {
+    p {
+      font-size: 0.83333rem; } }
+  @media (min-width: 900px) {
+    p {
+      font-size: 1rem; } }
+  @media (min-width: 1100px) {
+    p {
+      font-size: 1.16667rem; } }
+  @media (min-width: 1300px) {
+    p {
+      font-size: 1.33333rem; } }
+  @media (min-width: 1500px) {
+    p {
+      font-size: 1.5rem; } }
+
+.container-fluid > .row .link p {
+  font-size: 0.8rem; }
+
+.container-fluid > .row .header {
+  font-size: 1.5em; }
+  @media (min-width: 500px) {
+    .container-fluid > .row .header {
+      font-size: 1.66667em; } }
+  @media (min-width: 700px) {
+    .container-fluid > .row .header {
+      font-size: 1.83333em; } }
+  @media (min-width: 900px) {
+    .container-fluid > .row .header {
+      font-size: 2em; } }
+  @media (min-width: 1100px) {
+    .container-fluid > .row .header {
+      font-size: 2.16667em; } }
+  @media (min-width: 1300px) {
+    .container-fluid > .row .header {
+      font-size: 2.33333em; } }
+  @media (min-width: 1500px) {
+    .container-fluid > .row .header {
+      font-size: 2.5em; } }
+
+@media (max-width: 399px) {
+  .container-fluid > .row:nth-child(1) input, .container-fluid > .row:nth-child(1) p {
+    font-size: 0.5em; } }
+@media (min-width: 400px) {
+  .container-fluid > .row:nth-child(1) input, .container-fluid > .row:nth-child(1) p {
+    font-size: 0.7em; } }
+@media (min-width: 700px) {
+  .container-fluid > .row:nth-child(1) input, .container-fluid > .row:nth-child(1) p {
+    font-size: 1em; } }
+
+.container-fluid > .row:nth-child(2) p {
+  font-size: 0.3em; }
+  @media (min-width: 500px) {
+    .container-fluid > .row:nth-child(2) p {
+      font-size: 0.5em; } }
+  @media (min-width: 700px) {
+    .container-fluid > .row:nth-child(2) p {
+      font-size: 0.7em; } }
+  @media (min-width: 900px) {
+    .container-fluid > .row:nth-child(2) p {
+      font-size: 0.9em; } }
+  @media (min-width: 1100px) {
+    .container-fluid > .row:nth-child(2) p {
+      font-size: 1.1em; } }
+  @media (min-width: 1300px) {
+    .container-fluid > .row:nth-child(2) p {
+      font-size: 1.3em; } }
+  @media (min-width: 1500px) {
+    .container-fluid > .row:nth-child(2) p {
+      font-size: 1.5em; } }
+
+.container-fluid > .row:nth-child(3) h1 {
+  font-size: 1.5em; }
+  @media (min-width: 500px) {
+    .container-fluid > .row:nth-child(3) h1 {
+      font-size: 1.75em; } }
+  @media (min-width: 700px) {
+    .container-fluid > .row:nth-child(3) h1 {
+      font-size: 2em; } }
+  @media (min-width: 900px) {
+    .container-fluid > .row:nth-child(3) h1 {
+      font-size: 2.25em; } }
+  @media (min-width: 1100px) {
+    .container-fluid > .row:nth-child(3) h1 {
+      font-size: 2.5em; } }
+  @media (min-width: 1300px) {
+    .container-fluid > .row:nth-child(3) h1 {
+      font-size: 2.75em; } }
+  @media (min-width: 1500px) {
+    .container-fluid > .row:nth-child(3) h1 {
+      font-size: 3em; } }
+
+.quote p {
+  font-size: 0.8rem; }
+
+.title h2 {
+  font-size: 1.5em; }
+
+.graph h2 {
+  font-size: 1.5em; }
+  @media (min-width: 500px) {
+    .graph h2 {
+      font-size: 1.75em; } }
+  @media (min-width: 700px) {
+    .graph h2 {
+      font-size: 2em; } }
+  @media (min-width: 900px) {
+    .graph h2 {
+      font-size: 2.25em; } }
+  @media (min-width: 1100px) {
+    .graph h2 {
+      font-size: 2.5em; } }
+  @media (min-width: 1300px) {
+    .graph h2 {
+      font-size: 2.75em; } }
+  @media (min-width: 1500px) {
+    .graph h2 {
+      font-size: 3em; } }
+
+.team .name h2 {
+  font-size: 0.7em; }
+.team .name p {
+  font-size: 0.4em; }
+.team p {
+  font-size: 0.5em; }
+
 .link {
   display: inline-block;
-  height: 4em;
-  width: 12em;
   background-color: #02baab;
-  margin: 4em 1em;
+  height: 4rem;
+  width: 12rem;
+  max-width: 40%;
+  margin-top: 3em;
   border: 3px solid #02baab;
   cursor: pointer; }
   .link p {
+    color: white;
+    font-weight: bold;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-weight: bold; }
+    transform: translateY(-50%); }
   .link:hover {
     background-color: transparent; }
     .link:hover p {
@@ -30,16 +162,24 @@ p, h1, h2 {
   height: 5px;
   background-color: #eeeeee;
   border: 0px; }
-.header h1 {
-  font-size: 2.5em; }
+  @media (max-width: 900px) {
+    .header hr {
+      margin-top: 1em;
+      margin-bottom: 2em; } }
 
 .container-fluid > .row {
-  padding-left: 3em;
-  padding-right: 3em; }
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
 
 .container-fluid > .row:nth-child(1) {
   background-color: black;
-  text-align: center; }
+  text-align: center;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em; }
+  @media (max-width: 400px) {
+    .container-fluid > .row:nth-child(1) {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em; } }
   .container-fluid > .row:nth-child(1) .cell:nth-child(1) {
     position: relative; }
     .container-fluid > .row:nth-child(1) .cell:nth-child(1) input {
@@ -48,32 +188,28 @@ p, h1, h2 {
       color: #85939f;
       text-indent: 5px;
       padding: 0.5em;
-      margin: 0.5em 0; }
-    .container-fluid > .row:nth-child(1) .cell:nth-child(1) img {
+      width: 90%; }
+    .container-fluid > .row:nth-child(1) .cell:nth-child(1) .search {
       position: absolute;
-      left: 62%;
+      right: 6%;
       top: 50%;
       transform: translateY(-50%);
       cursor: pointer; }
   .container-fluid > .row:nth-child(1) .offsetCell {
     width: 50%; }
-  .container-fluid > .row:nth-child(1) .cell:nth-child(3) div {
-    float: left;
+    @media (max-width: 768px) {
+      .container-fluid > .row:nth-child(1) .offsetCell {
+        width: 33.33333%; } }
+  .container-fluid > .row:nth-child(1) .cell:nth-child(3) .cell {
     height: 100%;
     width: 50%; }
-    .container-fluid > .row:nth-child(1) .cell:nth-child(3) div p {
+    .container-fluid > .row:nth-child(1) .cell:nth-child(3) .cell p {
       color: #85939f;
       display: inline-block;
-      position: relative;
-      top: 45%;
-      transform: translateY(-50%);
       padding-left: 6px;
       cursor: pointer; }
-    .container-fluid > .row:nth-child(1) .cell:nth-child(3) div img {
+    .container-fluid > .row:nth-child(1) .cell:nth-child(3) .cell img {
       height: 40%;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
       cursor: pointer; }
 
 .container-fluid > .row:nth-child(2) {
@@ -82,6 +218,9 @@ p, h1, h2 {
   .container-fluid > .row:nth-child(2) img {
     width: 40%;
     padding: 1em 0; }
+    @media (max-width: 768px) {
+      .container-fluid > .row:nth-child(2) img {
+        width: 80%; } }
   .container-fluid > .row:nth-child(2) .row {
     height: 100%; }
     .container-fluid > .row:nth-child(2) .row .button {
@@ -97,7 +236,6 @@ p, h1, h2 {
         height: 80%; }
       .container-fluid > .row:nth-child(2) .row .button p {
         color: white;
-        font-size: 0.7em;
         position: absolute;
         top: 60%;
         left: 50%;
@@ -129,8 +267,11 @@ p, h1, h2 {
     top: 50%;
     transform: translateY(-50%); }
     .container-fluid > .row:nth-child(3) > div h1 {
-      color: white;
-      font-size: 3em; }
+      color: white; }
+  .container-fluid > .row:nth-child(3) .link {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    display: inline-block; }
 
 .container-fluid > .row:nth-child(4) {
   text-align: center;
@@ -169,7 +310,8 @@ p, h1, h2 {
       height: 25%;
       position: relative;
       top: 75%;
-      background-color: #3d3d3d; }
+      background-color: #3d3d3d;
+      padding: 5%; }
       .container-fluid > .row:nth-child(5) > .row .person .about div {
         float: left; }
         .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(1) {
@@ -179,8 +321,7 @@ p, h1, h2 {
           .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(1) p {
             position: relative;
             top: 50%;
-            transform: translateY(-50%);
-            padding-left: 20px; }
+            transform: translateY(-50%); }
             .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(1) p span {
               color: #02baab; }
         .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(2) {
@@ -211,11 +352,16 @@ p, h1, h2 {
           border-radius: 50%;
           margin: 0.7em;
           border: 2px solid #02baab; }
+          @media (max-width: 700px) {
+            .container-fluid > .row:nth-child(5) > .row .person .hover .background .circle {
+              height: 1.3em;
+              width: 1.3em; } }
           .container-fluid > .row:nth-child(5) > .row .person .hover .background .circle:hover {
             background-color: transparent; }
           .container-fluid > .row:nth-child(5) > .row .person .hover .background .circle img {
             position: relative;
             top: 50%;
+            width: 60%;
             transform: translateY(-50%); }
 
 .container-fluid > .row:nth-child(6) {
@@ -229,10 +375,20 @@ p, h1, h2 {
   .container-fluid > .row:nth-child(6) .cell:nth-child(2) {
     width: 33.33333%; }
     .container-fluid > .row:nth-child(6) .cell:nth-child(2) .link {
-      border: 3px solid white; }
+      border: 3px solid white;
+      margin-bottom: 3em;
+      max-width: 100%; }
       .container-fluid > .row:nth-child(6) .cell:nth-child(2) .link:hover {
         background-color: white;
         color: #02baab; }
+  @media (max-width: 700px) {
+    .container-fluid > .row:nth-child(6) .table {
+      display: block !important;
+      margin-top: 3em; }
+      .container-fluid > .row:nth-child(6) .table .cell {
+        display: block;
+        text-align: center;
+        width: 100%; } }
 
 .container-fluid > .row:nth-child(7) {
   text-align: center;
@@ -312,7 +468,6 @@ p, h1, h2 {
       text-align: left;
       padding: 10px; }
       .container-fluid > .row:nth-child(9) .post .title h2 {
-        font-size: 1.6em;
         margin-top: 0.5em;
         color: #02baab; }
     .container-fluid > .row:nth-child(9) .post .text {
@@ -333,12 +488,26 @@ p, h1, h2 {
         .container-fluid > .row:nth-child(9) .post .misc .cell:nth-child(2) p {
           display: inline-block;
           padding: 10px 10px 10px 0; }
+  @media (max-width: 768px) {
+    .container-fluid > .row:nth-child(9) .post {
+      width: 80%;
+      margin-left: 10% !important;
+      margin-right: 10% !important;
+      display: none; }
+      .container-fluid > .row:nth-child(9) .post .title {
+        height: auto; }
+      .container-fluid > .row:nth-child(9) .post .text {
+        height: auto; }
+    .container-fluid > .row:nth-child(9) .triggered {
+      display: block; } }
 
 .container-fluid > .row:nth-child(10) {
   text-align: center;
   background-color: #02baab;
   padding-top: 5em;
   padding-bottom: 5em; }
+  .container-fluid > .row:nth-child(10) .table:nth-child(2) .cell {
+    vertical-align: top; }
   .container-fluid > .row:nth-child(10) .header h1 {
     color: white; }
   .container-fluid > .row:nth-child(10) .header hr {
@@ -347,16 +516,18 @@ p, h1, h2 {
     text-align: center;
     width: 12.5%;
     height: 100%; }
-    .container-fluid > .row:nth-child(10) .dots .dotsContainer {
-      position: relative;
-      top: -12%; }
-      .container-fluid > .row:nth-child(10) .dots .dotsContainer .dot {
-        height: 1em;
-        width: 1em;
-        background-color: white;
-        display: inline-block;
-        border-radius: 50%;
-        margin: 1em; }
+    .container-fluid > .row:nth-child(10) .dots .dotsContainer .dot {
+      height: 1em;
+      width: 1em;
+      background-color: white;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 1em; }
+      @media (max-width: 850px) {
+        .container-fluid > .row:nth-child(10) .dots .dotsContainer .dot {
+          margin: 0; }
+          .container-fluid > .row:nth-child(10) .dots .dotsContainer .dot:nth-child(1), .container-fluid > .row:nth-child(10) .dots .dotsContainer .dot:nth-child(3) {
+            display: none; } }
   .container-fluid > .row:nth-child(10) .graph {
     width: 25%; }
     .container-fluid > .row:nth-child(10) .graph .outer {
@@ -380,8 +551,7 @@ p, h1, h2 {
           transform: translate(-50%, -50%); }
     .container-fluid > .row:nth-child(10) .graph h2 {
       color: white;
-      font-size: 3em;
-      margin-top: 1em; }
+      margin-top: 1rem; }
     .container-fluid > .row:nth-child(10) .graph p {
       color: white; }
 
@@ -393,7 +563,7 @@ p, h1, h2 {
   .container-fluid > .row:nth-child(11) .team {
     width: 21.25%;
     float: left;
-    height: 28em;
+    height: 40rem;
     background-color: #cccccc;
     position: relative;
     box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.75);
@@ -410,23 +580,25 @@ p, h1, h2 {
       background-image: url("images/team3.jpg"); }
     .container-fluid > .row:nth-child(11) .team:nth-child(4) {
       background-image: url("images/team4.jpg"); }
-    .container-fluid > .row:nth-child(11) .team .name {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-      background-color: white;
-      padding: 1em;
-      border: 2px solid grey;
-      z-index: 3; }
     .container-fluid > .row:nth-child(11) .team .about {
       background-color: white;
       position: absolute;
-      height: 50%;
+      height: 40%;
       bottom: 0%; }
       .container-fluid > .row:nth-child(11) .team .about p {
-        margin-top: 17%; }
+        margin: 10% 5% 0 5%; }
+      .container-fluid > .row:nth-child(11) .team .about .name {
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        background-color: white;
+        padding: 0.5rem;
+        border: 2px solid grey;
+        z-index: 3; }
+        .container-fluid > .row:nth-child(11) .team .about .name p {
+          margin: 0; }
     .container-fluid > .row:nth-child(11) .team .imShadow {
       box-shadow: 2px 13px 15px 0px rgba(0, 0, 0, 0.75);
       height: 25%; }
@@ -444,6 +616,15 @@ p, h1, h2 {
         background-color: transparent; }
         .container-fluid > .row:nth-child(11) .team .linkContainer .active p {
           color: #02baab; }
+  @media (max-width: 1000px) {
+    .container-fluid > .row:nth-child(11) .team {
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+      display: none;
+      height: 32rem; }
+    .container-fluid > .row:nth-child(11) .active:not(.link) {
+      display: inline-block; } }
 
 .container-fluid > .row:nth-child(12) {
   text-align: center;
