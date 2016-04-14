@@ -1,6 +1,10 @@
+var $containerRows = $(".container-fluid>.row");
 var $button = $(".button");
 var $person = $(".person");
 var $hover = $(".hover");
+var $quoteNav = $(".circleContainer .circle")
+var $quotes = $(".quote");
+var $quote, $quoteCircle, $child;
 
 //thank you stackoverflow
 //http://stackoverflow.com/questions/15191058/css-rotation-cross-browser-with-jquery-animate
@@ -32,16 +36,47 @@ $.fn.animateRotateReturn = function(angle, duration, easing, complete) {
 //                    FUNCTIONS
 //------------------------------------------------------------------
 
-function $slideMenu() {
-  $button.on("mouseenter", function() {
-    $(this).children(":nth-child(1)").animate({
+function $paddingMe() {
+  $width = $(window).width();
+  if ($width > 1500) {
+    $width = ($width - 1500) / 2;
+    $width += "px";
+    $containerRows.css("padding-left", $width);
+    $containerRows.css("padding-right", $width);
+  } else {
+    $containerRows.css("padding-left", "0.5em");
+    $containerRows.css("padding-right", "0.5em");
+  }
+}
+
+function $slideMenuMobile() {
+  $button.on("click", function() {
+    $(".upper").css("height", "20%");
+    $(".lower").css("height", "80%");
+    $(this).children(".upper").animate({
       height: "100%"
+    }, 300);
+    $(this).children(".lower").animate({
+      height: "0%"
+    }, 300);
+  })
+}
+function $slideMenuPC() {
+  $button.on("mouseenter", function() {
+    $(this).children(".upper").animate({
+      height: "100%"
+    }, 300);
+    $(this).children(".lower").animate({
+      height: "0%"
     }, 300);
   });
   $button.on("mouseleave", function() {
-    $(this).children(":nth-child(1)").animate({
+    $(this).children(".upper").animate({
       height: "20%"
     }, 500);
+    $(this).children(".lower").animate({
+      height: "80%"
+    }, 300);
   });
 }
 function $adjustHeight() {
@@ -70,6 +105,7 @@ function $animateChart() {
 function $showTeam() {
   $(".link").on("click", function() {
     if($(this).hasClass("active")) {
+      $(this).removeClass("active");
       $(this).parent().prev().animate({
         bottom: "0%"
       }, 500, function() {
@@ -78,8 +114,8 @@ function $showTeam() {
         }, 500);
       });
       $(this).parent().prev().removeClass("imShadow");
-      $(this).removeClass("active");
     } else {
+      $(this).addClass("active");
       $(this).parent().prev().addClass("imShadow");
       $(this).parent().prev().animate({
         bottom: "-25%"
@@ -88,18 +124,44 @@ function $showTeam() {
           top: "-400%"
         }, 500);
       });
-      $(this).addClass("active");
     }
   });
 }
+
+function $nextQuote() {
+  /* Add class .clicked to the corresponding .quote after .quoteNav is clicked */
+  $quoteNav.on("click", function() {
+    $quote = $(".quote.clicked");
+    $quoteCircle = $(".circle.clicked");
+    $quoteCircle.removeClass("clicked");
+    $(this).addClass("clicked");
+    for (var i = 1; $quotes.length >= i; i++) {
+      $child = ":nth-child(" + i + ")";
+      if ($(this).is($child)) {
+        $quoteSelector = ".quote" + $child;
+        $quote.removeClass("clicked");
+        $($quoteSelector).addClass("clicked");
+      }
+    }
+  })
+};
 //------------------------------------------------------------------
 //                    READY
 //------------------------------------------------------------------
 
 $(document).on("ready", function() {
-  $slideMenu();
+  $paddingMe();
+  $(window).resize(function() {
+    $paddingMe();
+  });
+  if (window.matchMedia('(max-width: 991px)').matches) {
+    $slideMenuMobile();
+  } else {
+    $slideMenuPC();
+  }
   $adjustHeight();
   $hoverPerson();
   $animateChart();
   $showTeam();
+  $nextQuote()
 })

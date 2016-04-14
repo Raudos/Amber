@@ -149,7 +149,8 @@ p {
     font-weight: bold;
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   @media only screen and (min-device-width: 992px) {
     .link:hover {
       background-color: transparent; }
@@ -195,7 +196,8 @@ p {
       height: 40%;
       right: 6%;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       cursor: pointer; }
   .container-fluid > .row:nth-child(1) .offsetCell {
     width: 50%; }
@@ -241,7 +243,8 @@ p {
         position: absolute;
         top: 60%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
       .container-fluid > .row:nth-child(2) .row .button:nth-child(1) .upper {
         background-color: #ffae00; }
       .container-fluid > .row:nth-child(2) .row .button:nth-child(2) .upper {
@@ -267,7 +270,8 @@ p {
   .container-fluid > .row:nth-child(3) > div {
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
     .container-fluid > .row:nth-child(3) > div h1 {
       color: white; }
   .container-fluid > .row:nth-child(3) .link {
@@ -323,14 +327,16 @@ p {
           .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(1) p {
             position: relative;
             top: 50%;
-            transform: translateY(-50%); }
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%); }
             .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(1) p span {
               color: #02baab; }
         .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(2) {
           width: 20%;
           position: relative;
           top: 50%;
-          transform: translateY(-50%); }
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%); }
           .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(2) img {
             margin-bottom: 5px; }
           .container-fluid > .row:nth-child(5) > .row .person .about div:nth-child(2) p {
@@ -346,7 +352,8 @@ p {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
         .container-fluid > .row:nth-child(5) > .row .person .hover .background .circle {
           height: 2em;
           width: 2em;
@@ -365,7 +372,8 @@ p {
             position: relative;
             top: 50%;
             width: 60%;
-            transform: translateY(-50%); }
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%); }
 
 .container-fluid > .row:nth-child(6) {
   text-align: center;
@@ -544,7 +552,8 @@ p {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         background-color: black;
         border-radius: 50%; }
         .container-fluid > .row:nth-child(10) .graph .outer .inner img {
@@ -552,7 +561,8 @@ p {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%); }
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
     .container-fluid > .row:nth-child(10) .graph h2 {
       color: white;
       margin-top: 1rem; }
@@ -595,7 +605,8 @@ p {
         position: absolute;
         top: -5%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         width: 60%;
         background-color: white;
         padding: 0.5rem;
@@ -669,5 +680,3 @@ p {
           width: 100%; }
       .container-fluid > .row:nth-child(12) .row .social .cell:nth-child(2) {
         width: 80%; }
-
-/*# sourceMappingURL=app.css.map */

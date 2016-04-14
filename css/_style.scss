@@ -20,10 +20,12 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  &:hover {
-    background-color: rgba(0,0,0,0);
-    p {
-      color: $thirdRowButton;
+  @media only screen and (min-device-width: 992px){
+    &:hover {
+      background-color: rgba(0,0,0,0);
+      p {
+        color: $thirdRowButton;
+      }
     }
   }
 }
@@ -72,6 +74,7 @@
     }
     .search {
       position: absolute;
+      height: 40%;
       right: 6%;
       top: 50%;
       transform: translateY(-50%);
@@ -250,7 +253,8 @@
       .about {
         height: 25%;
         position: relative;
-        top: 75%;
+        //dont forget the padding
+        top: 65%;
         background-color: $fifthRowInner;
         padding: 5%;
         div {
@@ -263,7 +267,6 @@
               position: relative;
               top: 50%;
               transform: translateY(-50%);
-
               span {
                 color: $thirdRowButton;
               }
@@ -308,6 +311,7 @@
             border: 2px solid $thirdRowButton;
             &:hover {
               background-color: rgba(0,0,0,0);
+              cursor: no-drop;
             }
             img {
               position: relative;
@@ -385,6 +389,7 @@
       h2 {
         font-size: 1.8em;
         margin-bottom: 0.8em;
+        line-height: 1em;
       }
     }
   }
@@ -399,6 +404,7 @@
   padding-top: 5em;
   padding-bottom: 5em;
   .quote {
+    display: none;
     h2 {
       color: white;
       font-size: 1.7em;
@@ -408,21 +414,24 @@
     p {
       color: $thirdRowButton;
     }
-    .circle {
-      width: 0.8em;
-      height: 0.8em;
-      background-color: white;
-      display: inline-block;
-      border-radius: 50%;
-      margin-top: 3em;
-      margin-left: 0.5em;
-      margin-right: 0.5em;
-      &:hover {
-        background-color: $thirdRowButton;
-        cursor: pointer;
-      }
+    &.clicked {
+      display: block;
     }
-    .clicked {
+  }
+  .circle {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 3em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    &:hover {
+      background-color: $thirdRowButton;
+      cursor: pointer;
+    }
+    &.clicked {
       background-color: $thirdRowButton;
     }
   }
@@ -506,18 +515,13 @@
   @media (max-width: 768px) {
     .post {
       width: 80%;
-      margin-left: 10% !important;
-      margin-right: 10% !important;
-      display: none;
+      margin: 2em 10% 2em 10% !important;
       .title {
         height: auto;
       }
       .text {
         height: auto;
       }
-    }
-    .triggered {
-      display: block;
     }
   }
 }
@@ -610,7 +614,7 @@
   .team {
     width: (85%/4);
     float: left;
-    height: 40rem;
+    height: 42rem;
     background-color: rgb(204,204,204);
     position: relative;
     box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.75);
@@ -640,7 +644,7 @@
       height: 40%;
       bottom: 0%;
       p {
-        margin: 10% 5% 0 5%;
+        margin: 12% 5% 0 5%;
       }
       .name {
         position: absolute;
@@ -671,7 +675,7 @@
       width: 100%;
       z-index: 2;
       .link {
-        margin: 0.5em 1em 1em 1em;
+        margin: 0.2em 1em 1em 1em;
       }
       .active {
         background-color: rgba(0,0,0,0);
