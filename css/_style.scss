@@ -573,8 +573,23 @@
     .outer {
       position: relative;
       img {
-        width: 100%;
+          width: 100%;
+          transform: rotate(0deg);
+          transition: 1s linear;
         }
+      .animateOne {
+        transform: rotate(-300deg);
+        transition: 1s linear;
+        width: 100%;
+      }
+      .animateTwo {
+        transform: rotate(-240deg);
+        transition: 1s linear;
+      }
+      .animateThree {
+        transform: rotate(-315deg);
+        transition: 1s linear;
+      }
       .inner {
         width: 50%;
         height: 50%;

@@ -537,7 +537,19 @@ p {
     .container-fluid > .row:nth-child(10) .graph .outer {
       position: relative; }
       .container-fluid > .row:nth-child(10) .graph .outer img {
+        width: 100%;
+        transform: rotate(0deg);
+        transition: 1s linear; }
+      .container-fluid > .row:nth-child(10) .graph .outer .animateOne {
+        transform: rotate(-300deg);
+        transition: 1s linear;
         width: 100%; }
+      .container-fluid > .row:nth-child(10) .graph .outer .animateTwo {
+        transform: rotate(-240deg);
+        transition: 1s linear; }
+      .container-fluid > .row:nth-child(10) .graph .outer .animateThree {
+        transform: rotate(-315deg);
+        transition: 1s linear; }
       .container-fluid > .row:nth-child(10) .graph .outer .inner {
         width: 50%;
         height: 50%;

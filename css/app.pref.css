@@ -545,7 +545,23 @@ p {
     .container-fluid > .row:nth-child(10) .graph .outer {
       position: relative; }
       .container-fluid > .row:nth-child(10) .graph .outer img {
+        width: 100%;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        transition: 1s linear; }
+      .container-fluid > .row:nth-child(10) .graph .outer .animateOne {
+        -webkit-transform: rotate(-300deg);
+                transform: rotate(-300deg);
+        transition: 1s linear;
         width: 100%; }
+      .container-fluid > .row:nth-child(10) .graph .outer .animateTwo {
+        -webkit-transform: rotate(-240deg);
+                transform: rotate(-240deg);
+        transition: 1s linear; }
+      .container-fluid > .row:nth-child(10) .graph .outer .animateThree {
+        -webkit-transform: rotate(-315deg);
+                transform: rotate(-315deg);
+        transition: 1s linear; }
       .container-fluid > .row:nth-child(10) .graph .outer .inner {
         width: 50%;
         height: 50%;

@@ -6,32 +6,6 @@ var $quoteNav = $(".circleContainer .circle")
 var $quotes = $(".quote");
 var $quote, $quoteCircle, $child;
 
-//thank you stackoverflow
-//http://stackoverflow.com/questions/15191058/css-rotation-cross-browser-with-jquery-animate
-$.fn.animateRotate = function(angle, duration, easing, complete) {
-    var args = $.speed(duration, easing, complete);
-    var step = args.step;
-    return this.each(function(i, e) {
-        args.step = function(now) {
-            $.style(e, 'transform', 'rotate(' + now + 'deg)');
-            if (step) return step.apply(this, arguments);
-        };
-
-        $({deg: 0}).animate({deg: angle}, args);
-    });
-};
-$.fn.animateRotateReturn = function(angle, duration, easing, complete) {
-    var args = $.speed(duration, easing, complete);
-    var step = args.step;
-    return this.each(function(i, e) {
-        args.step = function(now) {
-            $.style(e, 'transform', 'rotate(' + now + 'deg)');
-            if (step) return step.apply(this, arguments);
-        };
-
-        $({deg: 360}).animate({deg: angle}, args);
-    });
-};
 //------------------------------------------------------------------
 //                    FUNCTIONS
 //------------------------------------------------------------------
@@ -90,16 +64,20 @@ function $hoverPerson() {
 }
 function $animateChart() {
   $(".graph:nth-child(1)").children(".outer").on("mouseenter", function () {
-    $(this).children("img").animateRotate(-300, 500, "linear");
+    //$(this).children("img").animateRotate(-300, 500, "linear");
+    $(this).children("img").addClass("animateOne");
   });
   $(".graph:nth-child(3)").children(".outer").on("mouseenter", function () {
-    $(this).children("img").animateRotate(-240, 500, "linear");
+    //$(this).children("img").animateRotate(-240, 500, "linear");
+    $(this).children("img").addClass("animateTwo");
   });
   $(".graph:nth-child(5)").children(".outer").on("mouseenter", function () {
-    $(this).children("img").animateRotate(-315, 500, "linear");
+    //$(this).children("img").animateRotate(-315, 500, "linear");
+    $(this).children("img").addClass("animateThree");
   });
   $(".outer").on("mouseleave", function() {
-    $(this).children("img").animateRotateReturn(0, 500, "linear");
+    //$(this).children("img").animateRotateReturn(0, 500, "linear");
+    $(this).children("img").removeClass("animateOne animateTwo animateThree");
   })
 }
 function $showTeam() {
