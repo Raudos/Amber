@@ -1,7 +1,7 @@
 # Amber
 Site layout based on PSD file taken from https://stylemixthemes.com/freebies/amber-free-psd/ .
 
-Tools: Html, Css, Sass, Javascript jQuery, Gulp.
+Tools: Html, Css, Sass, Javascript, jQuery, Gulp.
 
 Site itself is created with grid made durning lectures in Coder's Lab (https://github.com/Raudos/myGrid) which is based
 on all the basic features of Bootstrap plus few additions added on my own. For the live version css has added all prefixes,
