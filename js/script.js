@@ -22,7 +22,7 @@ function $paddingMe() {
     $containerRows.css("padding-right", "0.5em");
   }
 }
-
+//hover was acting weird on mobile so i've put two functions, each is triggered depending on the width of device
 function $slideMenuMobile() {
   $button.on("click", function() {
     $(".upper").css("height", "20%");
@@ -54,6 +54,7 @@ function $slideMenuPC() {
   });
 }
 function $adjustHeight() {
+  //i just like squares, thats all
   $person.css("height", $person.width() + "px");
 }
 function $hoverPerson() {
@@ -63,24 +64,23 @@ function $hoverPerson() {
   });
 }
 function $animateChart() {
+  //when you put mouse over image it spins around
   $(".graph:nth-child(1)").children(".outer").on("mouseenter", function () {
-    //$(this).children("img").animateRotate(-300, 500, "linear");
     $(this).children("img").addClass("animateOne");
   });
   $(".graph:nth-child(3)").children(".outer").on("mouseenter", function () {
-    //$(this).children("img").animateRotate(-240, 500, "linear");
     $(this).children("img").addClass("animateTwo");
   });
   $(".graph:nth-child(5)").children(".outer").on("mouseenter", function () {
-    //$(this).children("img").animateRotate(-315, 500, "linear");
     $(this).children("img").addClass("animateThree");
   });
   $(".outer").on("mouseleave", function() {
-    //$(this).children("img").animateRotateReturn(0, 500, "linear");
     $(this).children("img").removeClass("animateOne animateTwo animateThree");
   })
 }
 function $showTeam() {
+  //whenever user clicks on the profile button div with name should animate to the top of parent element
+  //while about section goes under the parent element
   $(".link").on("click", function() {
     if($(this).hasClass("active")) {
       $(this).removeClass("active");
@@ -131,6 +131,7 @@ $(document).on("ready", function() {
   $paddingMe();
   $(window).resize(function() {
     $paddingMe();
+    $adjustHeight();
   });
   if (window.matchMedia('(max-width: 991px)').matches) {
     $slideMenuMobile();
